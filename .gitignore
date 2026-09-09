@@ -1,0 +1,56 @@
+# =====================================================================
+# LIRAY MED — À committer AVANT tout autre fichier.
+# Un secret poussé une fois reste dans l'historique Git même après
+# suppression. Les identifiants appartiennent au Client (section 5.2).
+# =====================================================================
+
+# --- Secrets et variables d'environnement ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*secret*
+service-account*.json
+
+# --- Dépendances ---
+node_modules/
+vendor/
+.venv/
+__pycache__/
+
+# --- Build ---
+dist/
+build/
+.next/
+out/
+*.tsbuildinfo
+
+# --- Base de données ---
+*.dump
+*.sql.gz
+db/backups/
+
+# --- Fichiers clients volumineux (photos brutes du catalogue) ---
+uploads/
+medias-source/
+
+# --- Système et éditeurs ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/settings.json
+*.log
+
+# --- Next.js ---
+next-env.d.ts
+/coverage
+.vercel
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Outillage local ---
+.claude/

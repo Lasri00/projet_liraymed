@@ -1,0 +1,157 @@
+{
+  "Brand": {
+    "name": "Liray Med",
+    "legalName": "Liray Med SARL",
+    "tagline": "Matériel médical · Casablanca"
+  },
+  "Nav": {
+    "home": "Accueil",
+    "catalogue": "Catalogue",
+    "contact": "Contact",
+    "language": "Langue",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "Profil": {
+    "particulier": "Particulier",
+    "professionnel": "Professionnel"
+  },
+  "Theme": {
+    "light": "Clair",
+    "dark": "Sombre"
+  },
+  "HomePage": {
+    "heroBadge": "Distributeur de matériel médical · Casablanca depuis 2023",
+    "heroTitle": "Le matériel médical de confiance, pour chaque besoin.",
+    "heroSubtitle": "Équipements, habillement hospitalier et parapharmacie pour les professionnels de santé et les particuliers. Sans prix affiché : vous nous dites ce qu'il vous faut, nous vous répondons sous 24 h ouvrées.",
+    "heroMediaHint": "Photo fournie par le client",
+    "ctaProducts": "Découvrir nos produits",
+    "ctaContact": "Nous contacter",
+    "stats": {
+      "clients": "clients accompagnés",
+      "clientsValue": "[XXX]+",
+      "references": "références produits",
+      "villes": "villes livrées",
+      "villesValue": "[XX]"
+    },
+    "categoriesEyebrow": "Catégories phares",
+    "categoriesTitle": "Ce que recherchent nos clients",
+    "allCatalogue": "Tout le catalogue",
+    "latestEyebrow": "Nouveautés",
+    "latestTitle": "Derniers produits ajoutés",
+    "servicesEyebrow": "Nos services",
+    "servicesTitle": "Plus qu'un catalogue : un partenaire",
+    "partnerTitle": "Notre fournisseur",
+    "contactTitle": "Une question, un projet d'équipement ?",
+    "contactText": "Décrivez votre besoin : nous vous rappelons avec une proposition adaptée à votre structure.",
+    "title": "Liray Med",
+    "description": "Fournitures et équipements médicaux."
+  },
+  "Services": {
+    "sav": {
+      "title": "SAV",
+      "text": "Un service après-vente réactif sur l'ensemble des équipements que nous distribuons."
+    },
+    "conseil": {
+      "title": "Conseil personnalisé",
+      "text": "Nous vous orientons vers la référence adaptée à votre usage réel, pas au catalogue."
+    },
+    "projet": {
+      "title": "Accompagnement de projet",
+      "text": "De l'équipement d'un cabinet au réassort d'un service hospitalier."
+    },
+    "livraison": {
+      "title": "Livraison",
+      "text": "Casablanca et national, avec des délais annoncés et tenus."
+    }
+  },
+  "Catalogue": {
+    "title": "Catalogue {profil}",
+    "intro": {
+      "particulier": "Matériel médical et parapharmacie pour un usage à domicile. Conseil, disponibilité et livraison. Changez de profil à tout moment pour voir la sélection Professionnel.",
+      "professionnel": "Références, fiches techniques et disponibilité pour cliniques, cabinets, pharmacies et laboratoires. Changez de profil à tout moment pour voir la sélection Particulier."
+    },
+    "activeProfile": "Profil {profil} actif",
+    "breadcrumb": "Fil d'Ariane",
+    "categories": "Catégories",
+    "allCategories": "Toutes les catégories",
+    "searchPlaceholder": "Nom ou référence…",
+    "viewProducts": "Voir produits",
+    "productCount": "{count, plural, =0 {aucun produit} one {# produit} other {# produits}}",
+    "noResults": "Aucun produit ne correspond à votre recherche.",
+    "resetFilters": "Réinitialiser les filtres",
+    "pagination": "Pagination",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "pageOf": "Page {page} sur {pages}"
+  },
+  "Disponibilite": {
+    "en_stock": "En stock",
+    "sur_commande": "Sur commande",
+    "rupture": "Rupture de stock"
+  },
+  "Product": {
+    "priceOnRequest": "Prix sur demande",
+    "requestQuote": "Demander un devis",
+    "contactWhatsapp": "Contacter sur WhatsApp",
+    "reference": "Référence",
+    "technicalSheet": "Fiche technique",
+    "colours": "Coloris",
+    "see": "Voir le produit",
+    "description": "Description",
+    "size": "Taille",
+    "dimension": "Dimension",
+    "category": "Catégorie",
+    "related": "Dans la même catégorie",
+    "photoHint": "Photo fournie par le client",
+    "whatsappIntro": "Bonjour Liray Med, je souhaite des informations sur ce produit :",
+    "orderNotice": "Aucun prix n'est affiché en ligne. Écrivez-nous sur WhatsApp ou par le formulaire de contact : nous revenons vers vous avec une proposition."
+  },
+  "ContactPage": {
+    "eyebrow": "Contact",
+    "title": "Parlons de votre besoin",
+    "intro": "Une demande de devis, une question technique, un besoin d'équipement : écrivez-nous, nous répondons sous 24 h ouvrées.",
+    "formTitle": "Votre demande",
+    "directTitle": "Contact direct",
+    "directText": "Le plus rapide reste WhatsApp : vous décrivez votre besoin, nous vous répondons avec les références disponibles.",
+    "addressTitle": "Nous rendre visite",
+    "addressPending": "Adresse et horaires à confirmer par Liray Med.",
+    "deliveryTitle": "Zone de livraison",
+    "deliveryText": "Casablanca et national. Les délais sont annoncés au moment de la commande."
+  },
+  "ContactForm": {
+    "profil": "Vous êtes",
+    "name": "Nom",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "city": "Ville",
+    "message": "Message",
+    "submit": "Envoyer ma demande",
+    "sending": "Envoi en cours…",
+    "success": "Votre message a été envoyé.",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "requiredField": "Ce champ est requis.",
+    "invalidEmail": "Adresse e-mail invalide.",
+    "privacyNotice": "Les informations recueillies par ce formulaire sont destinées à Liray Med SARL et servent uniquement à traiter votre demande. Conformément à la loi 09-08, vous disposez d'un droit d'accès, de rectification et d'opposition en écrivant à liraymed@gmail.com."
+  },
+  "Common": {
+    "search": "Rechercher",
+    "seeMore": "Voir plus",
+    "seeAll": "Voir tout",
+    "back": "Retour",
+    "close": "Fermer"
+  },
+  "System": {
+    "loading": "Chargement…",
+    "notFoundTitle": "Page introuvable",
+    "notFoundDescription": "La page que vous cherchez n'existe pas ou plus.",
+    "genericError": "Une erreur est survenue.",
+    "retry": "Réessayer"
+  },
+  "Footer": {
+    "about": "Distribution de matériel médical, d'habillement hospitalier et de produits parapharmaceutiques.",
+    "navigation": "Navigation",
+    "city": "Casablanca, Maroc",
+    "rights": "Tous droits réservés."
+  }
+}

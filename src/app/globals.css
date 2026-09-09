@@ -1,0 +1,388 @@
+@import "tailwindcss";
+
+/* Bascule manuelle, jamais system : le thème dépend de la classe .dark
+   posée côté serveur (cookie), pas de prefers-color-scheme. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------------------
+   Direction « Clinique & confiance » — reprise de la maquette validée.
+   Blancs teintés, bleu-vert profond, Plus Jakarta Sans + IBM Plex Sans.
+   Le thème sombre est dérivé de la même famille : le canvas de design ne
+   couvrait que le mode clair.
+--------------------------------------------------------------------------- */
+
+:root {
+  --bg: #f5f8f8;
+  --surface: #ffffff;
+  --surface-muted: #eef3f4;
+  --mint: #e3f1ef;
+  --line: #dce5e6;
+  --line-strong: #c4d0d3;
+
+  --ink: #0d1f24;
+  --muted: #5b6c72;
+  --faint: #8fa3a8;
+
+  --brand: #0b5f63;
+  --brand-hover: #094c4f;
+  --on-brand: #ffffff;
+
+  --hero: #0b3f45;
+  --hero-panel: #0f5257;
+  --mint-bright: #7fd1c1;
+  --mint-soft: #9fd9cc;
+  --mint-pale: #c9e4df;
+
+  --ok-bg: #e3f1ef;
+  --ok-fg: #0b5f63;
+  --ok-dot: #0b5f63;
+  --warn-bg: #fbf1df;
+  --warn-fg: #8a5a0e;
+  --warn-dot: #b7791f;
+  --off-bg: #f3eaea;
+  --off-fg: #8a2e2e;
+  --off-dot: #c0392b;
+
+  --shadow-card: 0 16px 32px -16px rgb(13 31 36 / 0.25);
+}
+
+.dark {
+  --bg: #071b1e;
+  --surface: #0c2529;
+  --surface-muted: #102e33;
+  --mint: #10373a;
+  --line: #1d3d42;
+  --line-strong: #2a5057;
+
+  --ink: #e7f1f1;
+  --muted: #a2b8bc;
+  --faint: #7d979c;
+
+  --brand: #58c4bb;
+  --brand-hover: #7ad5cd;
+  --on-brand: #052225;
+
+  --hero: #061518;
+  --hero-panel: #0d2f34;
+  --mint-bright: #7fd1c1;
+  --mint-soft: #9fd9cc;
+  --mint-pale: #c9e4df;
+
+  --ok-bg: #10373a;
+  --ok-fg: #7fd1c1;
+  --ok-dot: #58c4bb;
+  --warn-bg: #3a2f1a;
+  --warn-fg: #e3bd77;
+  --warn-dot: #d1a04a;
+  --off-bg: #3a2020;
+  --off-fg: #e8a3a3;
+  --off-dot: #cf6b6b;
+
+  --shadow-card: 0 16px 32px -16px rgb(0 0 0 / 0.55);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-mint: var(--mint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-on-brand: var(--on-brand);
+  --color-hero: var(--hero);
+  --color-hero-panel: var(--hero-panel);
+  --color-mint-bright: var(--mint-bright);
+  --color-mint-soft: var(--mint-soft);
+  --color-mint-pale: var(--mint-pale);
+
+  /* Alias conservés : le reste du code peut encore les référencer. */
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+
+  /* Titres. Le repli latin suffit : l'arabe descend sur Noto Sans Arabic
+     par la chaîne --font-sans ci-dessous. */
+  --font-display: var(--font-jakarta), var(--font-noto-sans-arabic), system-ui,
+    sans-serif;
+  /* Une seule chaîne, consommée partout : les glyphes arabes résolvent vers
+     Noto Sans Arabic par repli navigateur, sans bascule par locale. */
+  --font-sans: var(--font-plex), var(--font-noto-sans-arabic), system-ui,
+    sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* L'arabe se lit plus petit que le latin à taille égale (hauteur des
+   glyphes, diacritiques) : line-height augmenté quand dir="rtl". */
+[dir="rtl"] {
+  line-height: 1.8;
+}
+
+/* Les flèches et chevrons pointent dans le sens de lecture. */
+[dir="rtl"] .flip-rtl {
+  transform: scaleX(-1);
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 82rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container-page {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* Surtitre de section : petites capitales espacées, couleur de marque. */
+  .eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brand);
+  }
+
+  .surface-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 1.125rem;
+  }
+
+  /* Lévitation au survol, reprise de la maquette. */
+  .card-lift {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Trait de navigation qui se déploie dans le sens de lecture : les
+     propriétés logiques le retournent seules en RTL. */
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    padding-block: 0.375rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    inset-inline-end: 100%;
+    bottom: 0;
+    height: 2px;
+    background: var(--brand);
+    transition: inset-inline-end 0.25s ease;
+  }
+
+  .nav-link:hover::after,
+  .nav-link[data-active="true"]::after {
+    inset-inline-end: 0;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 3rem;
+    padding-inline: 1.25rem;
+    border-radius: 0.75rem;
+    border: 1px solid transparent;
+    font-family: inherit;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .btn-sm {
+    height: 2.5rem;
+    padding-inline: 0.875rem;
+    font-size: 0.8125rem;
+    border-radius: 0.625rem;
+  }
+
+  .btn-primary {
+    background: var(--brand);
+    color: var(--on-brand);
+  }
+
+  .btn-primary:hover {
+    background: var(--brand-hover);
+  }
+
+  .btn-outline {
+    background: var(--surface);
+    border-color: var(--line);
+    color: var(--ink);
+  }
+
+  .btn-outline:hover {
+    background: var(--surface-muted);
+  }
+
+  /* Sur fond sombre du hero uniquement. */
+  .btn-ghost {
+    background: rgb(255 255 255 / 0.12);
+    border-color: rgb(255 255 255 / 0.5);
+    color: #ffffff;
+  }
+
+  .btn-ghost:hover {
+    background: rgb(255 255 255 / 0.2);
+  }
+
+  .btn-whatsapp {
+    background: #1f9d55;
+    color: #ffffff;
+  }
+
+  .btn-whatsapp:hover {
+    background: #178144;
+  }
+
+  .field {
+    width: 100%;
+    height: 2.875rem;
+    padding-inline: 0.875rem;
+    border-radius: 0.625rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 0.9375rem;
+    outline: none;
+  }
+
+  textarea.field {
+    height: auto;
+    min-height: 8rem;
+    padding-block: 0.75rem;
+    line-height: 1.6;
+  }
+
+  .field::placeholder {
+    color: var(--faint);
+  }
+
+  .field:focus-visible {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent);
+  }
+
+  .field-label {
+    display: block;
+    margin-bottom: 0.375rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--muted);
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  /* Tout contenu large défile dans son propre conteneur : le corps de page
+     ne doit jamais défiler horizontalement. */
+  .scroll-x {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Bandeau partenaire : défilement continu, neutralisé en RTL par la
+   duplication de la piste (le sens importe peu, seul le mouvement compte). */
+@keyframes lm-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: lm-slide 18s linear infinite;
+}
+
+@keyframes lm-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: lm-rise 0.6s ease both;
+}
+
+/* Titre du hero, animé mot à mot. */
+.hero-title > span {
+  display: inline-block;
+  animation: lm-rise 0.6s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .rise,
+  .hero-title > span {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .card-lift:hover {
+    transform: none;
+  }
+}

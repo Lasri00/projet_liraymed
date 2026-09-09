@@ -1,0 +1,157 @@
+{
+  "Brand": {
+    "name": "Liray Med",
+    "legalName": "Liray Med SARL",
+    "tagline": "Medical equipment · Casablanca"
+  },
+  "Nav": {
+    "home": "Home",
+    "catalogue": "Catalogue",
+    "contact": "Contact",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "Profil": {
+    "particulier": "Individual",
+    "professionnel": "Professional"
+  },
+  "Theme": {
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "HomePage": {
+    "heroBadge": "Medical equipment distributor · Casablanca since 2023",
+    "heroTitle": "Medical equipment you can trust, for every need.",
+    "heroSubtitle": "Equipment, hospital wear and parapharmacy for healthcare professionals and individuals. No prices online: tell us what you need and we reply within 24 working hours.",
+    "heroMediaHint": "Photo supplied by the client",
+    "ctaProducts": "Browse our products",
+    "ctaContact": "Contact us",
+    "stats": {
+      "clients": "clients supported",
+      "clientsValue": "[XXX]+",
+      "references": "product references",
+      "villes": "cities served",
+      "villesValue": "[XX]"
+    },
+    "categoriesEyebrow": "Featured categories",
+    "categoriesTitle": "What our customers look for",
+    "allCatalogue": "Full catalogue",
+    "latestEyebrow": "New arrivals",
+    "latestTitle": "Latest additions",
+    "servicesEyebrow": "Our services",
+    "servicesTitle": "More than a catalogue: a partner",
+    "partnerTitle": "Our supplier",
+    "contactTitle": "A question, an equipment project?",
+    "contactText": "Describe what you need and we will come back to you with a proposal suited to your organisation.",
+    "title": "Liray Med",
+    "description": "Medical supplies and equipment."
+  },
+  "Services": {
+    "sav": {
+      "title": "After-sales service",
+      "text": "Responsive after-sales support on every piece of equipment we distribute."
+    },
+    "conseil": {
+      "title": "Personalised advice",
+      "text": "We point you to the reference that matches your actual use, not the catalogue."
+    },
+    "projet": {
+      "title": "Project support",
+      "text": "From equipping a practice to restocking a hospital department."
+    },
+    "livraison": {
+      "title": "Delivery",
+      "text": "Casablanca and nationwide, with lead times announced and met."
+    }
+  },
+  "Catalogue": {
+    "title": "{profil} catalogue",
+    "intro": {
+      "particulier": "Medical equipment and parapharmacy for home use. Advice, availability and delivery. Switch profile at any time to see the Professional selection.",
+      "professionnel": "References, technical sheets and availability for clinics, practices, pharmacies and laboratories. Switch profile at any time to see the Individual selection."
+    },
+    "activeProfile": "{profil} profile active",
+    "breadcrumb": "Breadcrumb",
+    "categories": "Categories",
+    "allCategories": "All categories",
+    "searchPlaceholder": "Name or reference…",
+    "viewProducts": "View products",
+    "productCount": "{count, plural, =0 {no products} one {# product} other {# products}}",
+    "noResults": "No product matches your search.",
+    "resetFilters": "Reset filters",
+    "pagination": "Pagination",
+    "previous": "Previous",
+    "next": "Next",
+    "pageOf": "Page {page} of {pages}"
+  },
+  "Disponibilite": {
+    "en_stock": "In stock",
+    "sur_commande": "Available to order",
+    "rupture": "Out of stock"
+  },
+  "Product": {
+    "priceOnRequest": "Price on request",
+    "requestQuote": "Request a quote",
+    "contactWhatsapp": "Contact via WhatsApp",
+    "reference": "Reference",
+    "technicalSheet": "Technical sheet",
+    "colours": "Colours",
+    "see": "View product",
+    "description": "Description",
+    "size": "Size",
+    "dimension": "Dimension",
+    "category": "Category",
+    "related": "In the same category",
+    "photoHint": "Photo supplied by the client",
+    "whatsappIntro": "Hello Liray Med, I would like information about this product:",
+    "orderNotice": "No price is shown online. Write to us on WhatsApp or through the contact form and we will come back to you with a proposal."
+  },
+  "ContactPage": {
+    "eyebrow": "Contact",
+    "title": "Let's talk about what you need",
+    "intro": "A quotation request, a technical question, an equipment need: write to us and we reply within 24 working hours.",
+    "formTitle": "Your enquiry",
+    "directTitle": "Direct contact",
+    "directText": "WhatsApp is fastest: describe what you need and we reply with the available references.",
+    "addressTitle": "Visit us",
+    "addressPending": "Address and opening hours to be confirmed by Liray Med.",
+    "deliveryTitle": "Delivery area",
+    "deliveryText": "Casablanca and nationwide. Lead times are given when the order is placed."
+  },
+  "ContactForm": {
+    "profil": "You are",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "city": "City",
+    "message": "Message",
+    "submit": "Send my enquiry",
+    "sending": "Sending…",
+    "success": "Your message has been sent.",
+    "error": "Something went wrong. Please try again.",
+    "requiredField": "This field is required.",
+    "invalidEmail": "Invalid email address.",
+    "privacyNotice": "The information collected through this form is intended for Liray Med SARL and is used solely to handle your enquiry. Under Moroccan law 09-08, you have a right of access, rectification and objection by writing to liraymed@gmail.com."
+  },
+  "Common": {
+    "search": "Search",
+    "seeMore": "See more",
+    "seeAll": "See all",
+    "back": "Back",
+    "close": "Close"
+  },
+  "System": {
+    "loading": "Loading…",
+    "notFoundTitle": "Page not found",
+    "notFoundDescription": "The page you're looking for doesn't exist or has been moved.",
+    "genericError": "Something went wrong.",
+    "retry": "Retry"
+  },
+  "Footer": {
+    "about": "Distribution of medical equipment, hospital wear and parapharmaceutical products.",
+    "navigation": "Navigation",
+    "city": "Casablanca, Morocco",
+    "rights": "All rights reserved."
+  }
+}
